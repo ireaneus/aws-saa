@@ -1,0 +1,57 @@
+# AWS vpn essentials
+
+The VPN connection has two parallel routes (IPsec tunnels), which is for redundancy.
+Only one Virtual Private Gateway can be attached to a VPC (just like only one IGW can be attached to a VPC).
+A VPC can have both a VPG and an IGW attached at the same time.
+
+# Customer Gateways:
+A Customer Gateway is a physical device or software application at the on-premise location that acts as the "connector" to the VPN connection.
+In your AWS account, the Customer Gateway component is where you configure the public IP address of the physical device or software application at the on-premise location
+Both a VPG and a Customer Gateway are required to establish a VPN connection.
+
+# VPN Connection:
+The VPN connection is the actual link between the virtual private gateway and the customer Gateway
+Each connection uses two IPsec tunnels for redundancy
+
+# Virtual Private Gateway
+A virtual private Gateway acts as the "connector" on the VPC (AWS) side of the VPN connection
+The VPG is connected to the VPC
+
+# Router
+When setting up a VPN the route table (for the subnet you wish to extend) must include routes for the on-premise network that are used by the VPN, and point them to the Virtual Private Gateway
+
+# Direct Connect Essentials:
+AWS Direct Connect is a service that provides a dedicated network connection between your network and one of the AWS Direct Connect locations.
+Does not require hosting any router/hardware at the Direct Connect Partner location, only requires a Direct Connect location and a participating backbone provider.
+An AWS Direct Connect location provides access to the AWS region it is associated with.
+It does not provide access to other AWS regions.
+    # Reduce network costs:
+    Reduce bandwidth commitment to corporate ISP over public internet
+    Data transferred over direct connect is billed at a lower rate by Amazon (data in/out)
+
+    # Increase network consistency
+    Dedicated private connections reduce latency (over sending the traffic via public routing)
+
+    # Dedicated private network connection to on-premise
+    Connect the direct connect connection to a VGW in your VPC for a dedicated private connection from on-premise to VPC.
+    Use Multiple VIF (Virtual Interfaces) to connect to multiple VPCs.
+
+# Storage Gateway Essentials
+Storage Gateway connects local data center software appliances to cloud based storage such as Amazon S3.
+It does this though the Storage Gateway virtual appliance, which connects directly to your local infrastructure as a file server, a local disk volume, or as a virtual tape library (VTL).
+It can maintain frequently accessed data on-premises (providing low-latency performance) while storing all other data in:
+    S3
+    EBS 
+    Glacier
+Storage Gateway also integrates your data with:
+    AWS encryption
+    Identity management
+    Monitoring
+    
+# Gateway-Cached Volumes
+Create storage volumes and mount them as iSCSI devices on the on-premise servers.
+The gateway will store the data written to this volume in Amazon S3 and will cache frequently access data on-premise in the storage device
+
+# Gateway-Stored Volumes
+Store all the data locally (on-premise) in storage volumes.
+Gateway will periodically take snapshots of the data as incremental backups and stores them on Amazon S3

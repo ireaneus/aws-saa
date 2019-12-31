@@ -1,0 +1,76 @@
+# AWS VPC
+
+# Region - IGW - VPC (AZ) - router - route table - network ACL - Subnet - Security group - Public subnet NAT instance - ec2 instances
+
+# Create VPC
+Name MyVPC
+10.0.0.0/16 is largest VPC
+Default VPC = No
+
+# Route Table
+Automatically created
+
+# Security Group and Network ACL
+Automatically created
+
+## Create subnets
+Name tag 10.0.1.0 - us-west-2a
+10.0.1.0/24 - Subnet = 1 AZ only
+/24 251 addresses available
+3 addresses used .1 .2 .3 - Router, DNS, Future
+Subnet Actions Modify Auto-Assign IP settings check enable
+
+Name tag 10.0.2.0 - us-west-2b
+10.0.2.0/24 - Subnet = 1 AZ only
+/24 251 addresses available
+
+## internet gateway
+Name MyIGW
+attach to MyVPC
+Only 1 IGW per VPC - cannot boost VPC with multiple IGWs
+
+## Edit Route Tables
+Create new Route
+Name MyPublic Route - MyVPC - Main=No
+Routes - 0.0.0.0/0 - MyIGW
+Subnet Associations - MyPublicSubnet - Edit
+
+## Add EC2 instances
+Use MyVPC Subnet - MyPublicSubnet
+external subnet setting (enabled)
+Tag Name MyWebServer
+Create new Security Group - MyWebSG
+ssh - http/httpd 
+
+Use MyVPC Subnet - MyPrivateSubnet
+subnet settings - (disabled)
+Tag Name MyAWSSQL
+Create new Security group - MyRDSSG
+ssh - Mysql security - 10.0.1.0/24
+
+ssh to public system
+Copy security pem file to public system
+chmod 0600 to pem file
+ssh ec2-user@privatei -i pem
+
+## NAT configuration
+Launch a NAT instance - EC2 - Launch instance - community AMI - most recent instance
+Configure network MyVPC Subnet MyPublicSubnet Name - MyNAT - Security Group existing - MyWebSG
+
+MyNAT Actions -Networking - Disable Source / destinations check
+MyWebSG - https rule
+VPC - Route table - Main route table MyVPC route - 0.0.0.0/0 - MyNAT
+Nat gateway - Main route table MyVPC route - 0.0.0.0/0 - NAT gateway 
+
+
+# Exam tips
+When creating a NAT instance disable source/destinations check
+NAT instance mubt be in public subnet
+There must be a route out of the private subnet to the NAT instance
+HA
+NAT instance behind security group
+
+# Custom VPC and ELBs
+MyELB
+Create 2 public subnets on 2 seperate AZs
+
