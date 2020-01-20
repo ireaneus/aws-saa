@@ -33,7 +33,7 @@
 
 | Compute | Network & Content Deliver | Management Tools |
 | :--- | :--- | :--- |
-| [x] EC2 | [ ] VPC | [ ] CloudWatch |
+| [x](aws-ec2.md) EC2 | [ ] VPC | [ ] CloudWatch |
 | [x] EC2 Container Service | [ ] CloudFront | [ ] CloudFormation |
 | [x] Elastic Beanstalk | [ ] Route 53 |
 | [x] Lamda |
@@ -50,7 +50,7 @@
 | Database |
 | :--- |
 | [x] RDS |
-| [x] DynamoDB |
+| [x](aws-dynamodb.md) DynamoDB |
 | [ ] ElasticCache |
 | [ ] Redshift |
 
