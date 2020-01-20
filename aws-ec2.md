@@ -1,5 +1,7 @@
 # AWS EC2
 
+Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers.
+
 ## EC2 Essentials
 
 - **Amazon Machine Image (AMI):** *Operating system and other settings*
@@ -12,6 +14,7 @@
 - Bootstrapping - custom launch commands can be passed into the instance during launch - user-data scripts
 - Tags - can be used to name, organize instances
 - Limits - to the number of instances in a region at a particular time.
+- Use AWS System Manager to remotely run commands within EC2 instances.  Enable IAM role AWS System Manager.
 
 ### [EC2 instance types]
 
@@ -52,6 +55,10 @@ Bid on instance type and only pay for and use that instance when the spot price 
 When you have an active bid, an instance is provisioned for you when the spot price is equal or below, and is terminated automatically when the price goes greater than your bid
 
 ### [EC2 Placement Groups]
+
+The use of a placement group is ideal _______
+
+- When your fleet of EC2 instances requires high network throughput and low latency within a single availability zone.
 
 - Placement group is a cluster of instances within the same availablity zone.  Used for applications that require an extremely low latency network between them.
 AWS attempts to place all instances as close as physically possible in the datacenter to reduce latency.
