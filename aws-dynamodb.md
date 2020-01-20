@@ -102,3 +102,13 @@ GetItems - updateItem if item=original - indempotent - critical data
 not indempotent - not critical data
 
 ## BatchGetItem
+
+## Scenarios
+
+*Your design team is about to implement an urgently needed collection and analysis solution. The data you will collect from an array of 50,000 anonymous data collectors will be summarized each day but rarely used again. The data will be pulled from collectors approximately once an hour. The Dev responsible for the DynamoDB design is concerned about how to design the Partition and Local keys to ensure efficient use of the DynamoDB tables. What advice would you provide.*
+
+- Create a new table each day, and reconfigure the old table for infrequent use after the summation is complete.
+
+*You are working with the S3 API and receive an error message: 409 Conflict. What is the possible cause of this error?*
+
+- You're attempting to remove a bucket without emptying the contents of the bucket first.
