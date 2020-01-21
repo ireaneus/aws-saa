@@ -1,27 +1,29 @@
-###  AWS Account and Services  ###
+# AWS - Identity and Access Management
 
-# AWS Root account
+##  AWS Account and Services
+
+### AWS Root account
 root account credentials are the email address and password used when signing up for AWS account
 By default root user has FULL admin rights and access to every part of the account
 
-# Best practice for root user:
+### Best practice for root user:
 Should not use root user for daily work and aws adminstration.  Create a second user that has admin rights and use it instead
 Protect root account with MFA
 
-# AWS Admin User account
+### AWS Admin User account
 Used in place of root account, granting AdministratorAccess Policy, allows all access except Billing account permissions.
 
-# IAM Essentials:
+## IAM Essentials:
 IAM - Identity and Access Management - Manage AWS users, groups, and roles, and their access to AWS accounts and services
 IAM is a global access resource. Provides access and permissions to AWS resources
 
-# The common use of IAM is to manage:
-    users
-    groups
-    roles
-    IAM access policies
-    API keys
-    Specify a password policy as well as manage MFA requirements on a per user basis
+### The common use of IAM is to manage:
+- users
+- groups
+- roles
+- IAM access policies
+- API keys
+- Specify a password policy as well as manage MFA requirements on a per user basis
 
 By default, any new IAM user you create in an AWS account is created with NO access to any AWS services.  This is a non-explicit deny rule set on all new IAM users.
 For all users (besides the root user), permissions must be given that grant access to AWS services (this is done through IAM policies)
