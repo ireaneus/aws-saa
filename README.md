@@ -2,22 +2,28 @@
 
 ## Table of Contents
 
-- [Helpful Links](#helpful-links)
-- [Getting Started](#getting-started)
-- [Definitions](awsdefinitions.md)
-- [Dynomodb](aws-dynamodb.md)
-- [EC2](aws-ec2.md)
-- [S3](#s3-notes)
-- [IAM](#iam-notes)
-- [SWF](#swf-notes)
-- [SQS](#sqs-notes)
-- [Exam Samples](#exam-sample)
-  - [Answers](#answers)
-- [Free Services](#free-services)
-- [HTTP Codes](#http-codes)
-- [ECS](#ecs)
-- [Cloudformation](#cloudformation)
-- [ElasticBeanStalk](#elastic-beanstalk)
+- [AWS Certified Solutions Architect - Associate Level (SAAC01)](#aws-certified-solutions-architect---associate-level-saac01)
+  - [Table of Contents](#table-of-contents)
+  - [Helpful Links](#helpful-links)
+    - [Read the following from AWS documentation: FAQ, What is, Getting started](#read-the-following-from-aws-documentation-faq-what-is-getting-started)
+  - [Getting started](#getting-started)
+    - [Creating an AWS Account](#creating-an-aws-account)
+      - [Free Tier account setup](#free-tier-account-setup)
+      - [Setup](#setup)
+      - [Billing monitoring](#billing-monitoring)
+  - [S3 notes](#s3-notes)
+    - [Encryption data in-transaction](#encryption-data-in-transaction)
+    - [Encryption data at requests](#encryption-data-at-requests)
+  - [SWF Notes](#swf-notes)
+  - [SQS Notes](#sqs-notes)
+  - [Exam Sample](#exam-sample)
+    - [ANSWERS](#answers)
+  - [Free services](#free-services)
+  - [http codes](#http-codes)
+  - [ECS](#ecs)
+    - [SDKs - perl not supported](#sdks---perl-not-supported)
+  - [CloudFormation](#cloudformation)
+  - [Elastic Beanstalk](#elastic-beanstalk)
 
 ## Helpful Links
 
@@ -104,38 +110,6 @@ Cross Origin Resource Sharing - Need to enable it on the resources bucket and st
 
 - AES-256
 - x-amz-server-side-encryption request header to upload requests
-
-## IAM notes
-
-### Access Management Basics
-
-- Principal *A person or application that can make an authenticated or anonymous request*
-- Authentication *The process of authenticating a principal against an identity*
-- Identity *Objects that require authentication and are authorized to access resources*
-- Authorization *The process of checking and allowing or denying access to a resource for an identity*
-
-### Shared Responsibility/Security Model
-
-#### Customer Security in the cloud
-
-- Customer data
-- Platform, Application, Identity and Access management
-- Operating system, Network and Firewall Config
-- Encryption - At rest and in transit
-- Network protection
-
-#### AWS Security of the cloud
-
-- Software
-- compute storage database network
-- Hardware AWS infrastructure
-- Regions AZs Edge location
-
-AWS Identity and Access Management (IAM) enables you to securely control access to AWS services and resources for your users. Using IAM, you can create and manage AWS users and groups, and use permissions to allow and deny their access to AWS resources.
-
-- AWS account default limit of 20 EC2 instances.
-- Use an IAM role to manage temporary credentials for applications that run on an EC2 instance.
-- When you use a role, you don't have to distribute long-term credentials to an EC2 instance.
 
 ## SWF Notes
 
