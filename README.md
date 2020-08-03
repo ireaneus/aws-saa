@@ -2,23 +2,28 @@
 
 ## Table of Contents
 
-- [Helpful Links](#helpful-links)
-- [Getting Started](#getting-started)
-- [Definitions](awsdefinitions.md)
-- [Dynomodb](aws-dynamodb.md)
-- [EC2](aws-ec2.md)
-- [S3](#s3-notes)
-- [IAM](aws-iam.md)
-- [LAMBDA](aws-lambda.md)
-- [SWF](#swf-notes)
-- [SQS](#sqs-notes)
-- [Exam Samples](#exam-sample)
-  - [Answers](#answers)
-- [Free Services](#free-services)
-- [HTTP Codes](#http-codes)
-- [ECS](#ecs)
-- [Cloudformation](#cloudformation)
-- [ElasticBeanStalk](#elastic-beanstalk)
+- [AWS Certified Solutions Architect - Associate Level (SAAC01)](#aws-certified-solutions-architect---associate-level-saac01)
+  - [Table of Contents](#table-of-contents)
+  - [Helpful Links](#helpful-links)
+    - [Read the following from AWS documentation: FAQ, What is, Getting started](#read-the-following-from-aws-documentation-faq-what-is-getting-started)
+  - [Getting started](#getting-started)
+    - [Creating an AWS Account](#creating-an-aws-account)
+      - [Free Tier account setup](#free-tier-account-setup)
+      - [Setup](#setup)
+      - [Billing monitoring](#billing-monitoring)
+  - [S3 notes](#s3-notes)
+    - [Encryption data in-transaction](#encryption-data-in-transaction)
+    - [Encryption data at requests](#encryption-data-at-requests)
+  - [SWF Notes](#swf-notes)
+  - [SQS Notes](#sqs-notes)
+  - [Exam Sample](#exam-sample)
+    - [ANSWERS](#answers)
+  - [Free services](#free-services)
+  - [http codes](#http-codes)
+  - [ECS](#ecs)
+    - [SDKs - perl not supported](#sdks---perl-not-supported)
+  - [CloudFormation](#cloudformation)
+  - [Elastic Beanstalk](#elastic-beanstalk)
 
 ## Helpful Links
 
@@ -33,7 +38,7 @@
 
 | Compute | Network & Content Deliver | Management Tools |
 | :--- | :--- | :--- |
-| [EC2](aws-ec2.md) | [ ] VPC | [ ] CloudWatch |
+| [x] [EC2](aws-ec2.md) | [ ] VPC | [ ] CloudWatch |
 | [x] EC2 Container Service | [ ] CloudFront | [ ] CloudFormation |
 | [x] Elastic Beanstalk | [ ] Route 53 |
 | [x] Lamda |
@@ -41,7 +46,7 @@
 
 | Storage | Security, Identity & Compliance | Messaging |
 |:---| :--- | :--- |
-| [x] S3 | [ ] IAM | [ ] Simple Queue Service |
+| [x] [S3](#s3-notes) | [ ] IAM | [ ] Simple Queue Service |
 | [ ] EFS | | [ ] Simple Notification Service |
 | [ ] EBS |
 | [ ] Glacier |
