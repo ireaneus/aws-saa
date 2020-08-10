@@ -46,7 +46,7 @@
 
 | Storage | Security, Identity & Compliance | Messaging |
 |:---| :--- | :--- |
-| [x] [S3](#s3-notes) | [ ] IAM | [ ] Simple Queue Service |
+| [x] [S3](#s3-notes) | [x] [IAM](aws-iam.md) | [ ] Simple Queue Service |
 | [ ] EFS | | [ ] Simple Notification Service |
 | [ ] EBS |
 | [ ] Glacier |
