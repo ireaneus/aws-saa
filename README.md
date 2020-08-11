@@ -11,6 +11,8 @@
       - [Free Tier account setup](#free-tier-account-setup)
       - [Setup](#setup)
       - [Billing monitoring](#billing-monitoring)
+  - [Recovery Point Objective RPO](#recovery-point-objective-rpo)
+  - [Recovery Time Objective RTO](#recovery-time-objective-rto)
   - [S3 notes](#s3-notes)
     - [Encryption data in-transaction](#encryption-data-in-transaction)
     - [Encryption data at requests](#encryption-data-at-requests)
@@ -86,6 +88,14 @@ Requirements
     - Billing -> Total estimated charges [x] $10.00 / per month
     - Create new SNS topic - BillingAlarm - email address - confirm - create alarm
 
+## Recovery Point Objective RPO
+
+How much a business can tolerate to lose, expressed in **time**.  The maximum time between a failure and the last successful backup.
+
+## Recovery Time Objective RTO
+
+The maximum amount of time a system can be **down**.  How long a solution takes to **recover**
+.
 ## S3 notes
 
 Amazon S3 is a repository for Internet data. Amazon S3 provides access to reliable, fast, and inexpensive data storage infrastructure. It is designed to make web-scale computing easy by enabling you to store and retrieve any amount of data, at any time, from within Amazon EC2 or anywhere on the web
