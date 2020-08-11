@@ -119,6 +119,8 @@ Encryption is either symmetrical or asymmetrical
 Asymmetrical has a public and private key for encryption
 
 >Encryption at rest
+
+
 >Encryption in transit
 
 ## S3 notes
