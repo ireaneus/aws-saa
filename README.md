@@ -14,6 +14,8 @@
   - [Recovery Point Objective RPO](#recovery-point-objective-rpo)
   - [Recovery Time Objective RTO](#recovery-time-objective-rto)
   - [Scaling and Elasticity](#scaling-and-elasticity)
+  - [Tiered Application Design](#tiered-application-design)
+  - [Encryption](#encryption)
   - [S3 notes](#s3-notes)
     - [Encryption data in-transaction](#encryption-data-in-transaction)
     - [Encryption data at requests](#encryption-data-at-requests)
@@ -105,6 +107,19 @@ Scaling is the ability of a system to scale with ever increasing demand, and it 
 > Horizontal scaling is achieved by adding additional machines into a pool of resources, each providing the same service.
 
 Elasticity is
+
+## Tiered Application Design
+
+Architectuarally, applications consiste of three tiers: The **presentation tier**, interation with the comsumer of the app.
+The **logic tier** which delivers the application functionality.  The **data tier**, which controls interaction with a database.
+
+## Encryption
+
+Encryption is either symmetrical or asymmetrical
+Asymmetrical has a public and private key for encryption
+
+>Encryption at rest
+>Encryption in transit
 
 ## S3 notes
 
