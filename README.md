@@ -37,7 +37,7 @@
 - [https://aws.amazon.com/vpc/faqs/](https://aws.amazon.com/vpc/faqs/)
 - [https://www.certmetrics.com/amazon/](https://www.certmetrics.com/amazon/)
 
-*Amazon AWS [free](https://aws.amazon.com/free/) services, some have free 12 month allocation.*
+Amazon AWS [free](https://aws.amazon.com/free/) services, some have free 12 month allocation.
 
 ### Read the following from AWS documentation: FAQ, What is, Getting started
 
@@ -162,7 +162,7 @@ In SWF, what does a "domain" refer to?
 - Max visibility timeout 12hours
 - ChangeMessageVisibility
 
-*What is long polling used for?*
+What is long polling used for?
 
 - SQS messages can contain up to 256KB of data. This data can include any information needed. In order to work around the limit issue, the message can contain information on how to access the larger dataset from another service such as S3 or DynamoDB.
 
@@ -170,7 +170,7 @@ In SWF, what does a "domain" refer to?
 
 Question 1
 
-*Amazon Glacier is designed for: (Choose 2 answers)*
+Amazon Glacier is designed for: (Choose 2 answers)
 
 - A. active database storage.
 - B. infrequently accessed data.
@@ -180,7 +180,7 @@ Question 1
 
 Question 2
 
-*Your web application front end consists of multiple EC2 instances behind an Elastic Load Balancer. You configured ELB to perform health checks on these EC2 instances. If an instance fails to pass health checks, which statement will be true?*
+Your web application front end consists of multiple EC2 instances behind an Elastic Load Balancer. You configured ELB to perform health checks on these EC2 instances. If an instance fails to pass health checks, which statement will be true?
 
 - A. The instance is replaced automatically by the ELB.
 - B. The instance gets terminated automatically by the ELB.
@@ -189,7 +189,7 @@ Question 2
 
 Question 3
 
-*You are building a system to distribute confidential training videos to employees. Using CloudFront, what method could be used to serve content that is stored in S3, but not publically accessible from S3 directly?*
+You are building a system to distribute confidential training videos to employees. Using CloudFront, what method could be used to serve content that is stored in S3, but not publically accessible from S3 directly?
 
 - A. Create an Origin Access Identity (OAI) for CloudFront and grant access to the objects in your S3 bucket to that OAI.
 - B. Add the CloudFront account security group “amazon-cf/amazon-cf-sg” to the appropriate S3 bucket policy.
@@ -198,7 +198,7 @@ Question 3
 
 Question 4
 
-*Which of the following will occur when an EC2 instance in a VPC (Virtual Private Cloud) with an associated Elastic IP is stopped and started? (Choose 2 answers)*
+Which of the following will occur when an EC2 instance in a VPC (Virtual Private Cloud) with an associated Elastic IP is stopped and started? (Choose 2 answers)
 
 - A. The Elastic IP will be dissociated from the instance
 - B. All data on instance-store devices will be lost
@@ -208,7 +208,7 @@ Question 4
 
 Question 5
 
-*In the basic monitoring package for EC2, Amazon CloudWatch provides the following metrics:*
+In the basic monitoring package for EC2, Amazon CloudWatch provides the following metrics:
 
 - A. web server visible metrics such as number failed transaction requests
 - B. operating system visible metrics such as memory utilization
@@ -217,7 +217,7 @@ Question 5
 
 Question 6
 
-*Which is an operational process performed by AWS for data security?*
+Which is an operational process performed by AWS for data security?
 
 - A. AES-256 encryption of data stored on any shared storage device
 - B. Decommissioning of storage devices using industry-standard practices
@@ -227,7 +227,7 @@ Question 6
 
 Question 7
 
-*To protect S3 data from both accidental deletion and accidental overwriting, you should:*
+To protect S3 data from both accidental deletion and accidental overwriting, you should:
 
 - A. enable S3 versioning on the bucket
 - B. access S3 data using only signed URLs
@@ -287,7 +287,7 @@ Question 7
 
 There is no limit to the number of templates, however there is a limit of 200 stacks per AWS account.
 
-*What section of the CloudFormation would you edit in order to allow the user to specify the PEM key-name at start time?*
+What section of the CloudFormation would you edit in order to allow the user to specify the PEM key-name at start time?
 
 - Parameters
 
